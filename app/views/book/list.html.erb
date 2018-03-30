@@ -1,0 +1,17 @@
+<% if @books.blank? %>
+  <h5>There are no any books currently in the system.</h5>
+<% else %>
+  <h5>These are the books in the system</h5>
+  <ul id="books">
+    <% @books.each do |b| %>
+      <li>
+        <p>
+          <%= link_to b.title, {:action => 'show', :id => b.id} %>
+          <%= link_to 'Edit', {:action => 'edit', :id => b.id} %>
+          <%= link_to 'Delete', {:action => 'delete', :id => b.id}, :confirm => "Are you sure you want to delete this item ?" %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to "Add new book", {:action => 'new'} %>

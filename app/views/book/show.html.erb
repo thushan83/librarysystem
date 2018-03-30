@@ -1,0 +1,11 @@
+<h1>Book details</h1>
+<img src="" width="200px" height="300px">
+<p><label for="book_title">Title</label>
+  <label for="book_title_value"><%= @book.title %></label></p>
+<p><label for="book_author">Author</label>
+  <label for="book_author_value"><%= @book.author %></label></p>
+<p><label for="book_isbn">ISBN</label>
+  <label for="book_isbn_value"><%= @book.isbn %></label></p>
+<p><label for="book_price">Price</label>
+  <label for="book_price_value"><%= @book.price %></label></p>
+<%= link_to "Books List", :action => 'list' %>
